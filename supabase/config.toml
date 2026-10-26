@@ -1,0 +1,7 @@
+project_id = "lembar-senja"
+
+[functions.telegram-admin]
+verify_jwt = true
+
+[functions.telegram-webhook]
+verify_jwt = false

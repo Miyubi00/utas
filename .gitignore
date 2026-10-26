@@ -1,0 +1,18 @@
+# Local configuration and secrets
+.agents/
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local Supabase CLI state
+supabase/.temp/
+
+# Operating system and tool artifacts
+.DS_Store
+Thumbs.db
+*.log
+
