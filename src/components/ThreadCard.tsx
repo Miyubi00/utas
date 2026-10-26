@@ -63,9 +63,8 @@ export const ThreadCard: React.FC<ThreadCardProps> = ({
               <div className="ml-auto flex shrink-0 items-center gap-1.5">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] leading-snug text-coklat-sedang">
                 {showPinnedBadge && post.is_pinned && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-lumut/10 px-2 py-1 font-medium text-lumut">
-                    <Pin className="h-3 w-3 fill-current" aria-hidden="true" />
-                    <span>Disematkan</span>
+                  <span role="img" aria-label="Disematkan" title="Disematkan" className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lumut/10 text-lumut">
+                    <Pin className="h-3.5 w-3.5 fill-current" aria-hidden="true" />
                   </span>
                 )}
                 <span className="inline-flex items-center gap-1.5">
