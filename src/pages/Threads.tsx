@@ -56,7 +56,7 @@ export const Threads: React.FC = () => {
           onSelectDate={setSelectedDate}
         />
 
-        <div className="flex min-h-11 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-garis px-1 pb-3 text-[13px] leading-relaxed text-coklat-sedang sm:text-sm">
+        <div className="flex min-h-11 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-garis px-1 pb-3 text-xs leading-relaxed text-coklat-sedang sm:text-sm">
           {filteredThreads.length > 0 && (
             <span className="min-w-0 flex-1" aria-live="polite">
               {selectedDate ? (
@@ -70,7 +70,7 @@ export const Threads: React.FC = () => {
             type="button"
             onClick={() => loadThreads(true)}
             disabled={isRefreshing}
-            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-[13px] font-medium text-lumut transition-colors hover:bg-lumut/10 disabled:cursor-wait disabled:opacity-60 sm:text-sm"
+            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-xs font-medium text-lumut transition-colors hover:bg-lumut/10 disabled:cursor-wait disabled:opacity-60 sm:text-sm"
           >
             <RefreshCw className={`h-4 w-4 ${isRefreshing ? 'animate-spin' : ''}`} aria-hidden="true" />
             <span>{isRefreshing ? 'Memuat…' : 'Segarkan'}</span>
@@ -93,7 +93,7 @@ export const Threads: React.FC = () => {
             <h2 className="mt-4 font-playfair text-xl font-semibold text-coklat-tua sm:text-2xl">
               Belum ada catatan pada {formatIndonesianDate(selectedDate)}
             </h2>
-            <p className="mx-auto mt-2 max-w-sm text-base leading-relaxed text-coklat-sedang">
+            <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-coklat-sedang sm:text-base">
               Pilih tanggal lain untuk membaca catatan yang tersimpan.
             </p>
             <button
@@ -107,8 +107,8 @@ export const Threads: React.FC = () => {
         ) : (
           <div className="paper-sheet rounded-2xl px-5 py-12 text-center sm:px-10 sm:py-16">
             <MessageSquareQuote className="mx-auto h-9 w-9 text-lumut/70" aria-hidden="true" />
-            <h2 className="mt-4 font-playfair text-2xl font-semibold text-coklat-tua">Belum ada utas</h2>
-            <p className="mx-auto mt-2 max-w-sm text-base leading-relaxed text-coklat-sedang">
+            <h2 className="mt-4 font-playfair text-xl font-semibold text-coklat-tua sm:text-2xl">Belum ada utas</h2>
+            <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-coklat-sedang sm:text-base">
               Catatan pertama akan muncul di sini saat sudah diterbitkan.
             </p>
           </div>

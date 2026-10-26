@@ -88,7 +88,7 @@ export const DateBar: React.FC<DateBarProps> = ({
       <div className="mb-3 flex flex-wrap items-center gap-3 border-b border-garis/80 pb-3 sm:mb-4">
         <div className="flex min-w-0 flex-wrap items-center gap-x-2.5 gap-y-1">
           <Calendar className="h-4 w-4 shrink-0 text-lumut" aria-hidden="true" />
-          <h2 className="font-playfair text-lg font-semibold leading-tight text-coklat-tua sm:text-xl">{headerDateLabel}</h2>
+          <h2 className="font-playfair text-base font-semibold leading-tight text-coklat-tua sm:text-xl">{headerDateLabel}</h2>
         </div>
         {selectedDate && (
           <button
@@ -124,13 +124,13 @@ export const DateBar: React.FC<DateBarProps> = ({
               className={`relative flex h-[76px] shrink-0 snap-center flex-col items-center justify-center gap-1 rounded-xl border p-2 transition-colors sm:h-[82px] ${item.isToday ? 'w-[74px] sm:w-[78px]' : 'w-[54px] sm:w-[60px]'} ${isSelected ? 'border-coklat-tua bg-coklat-tua text-kertas' : item.isToday ? 'border-lumut bg-lumut/5 text-coklat-tua' : 'border-garis bg-kertas text-coklat-tua hover:border-lumut/50 hover:bg-krem'}`}
             >
               {item.isToday ? (
-                <span className={`whitespace-nowrap font-playfair text-sm font-semibold sm:text-base ${isSelected ? 'text-[#E1E9DC]' : 'text-lumut'}`}>
+                <span className={`whitespace-nowrap font-playfair text-[13px] font-semibold sm:text-base ${isSelected ? 'text-[#E1E9DC]' : 'text-lumut'}`}>
                   Hari ini
                 </span>
               ) : (
                 <>
-                  <span className={`text-[13px] font-semibold ${isSelected ? 'text-[#E1E9DC]' : 'text-coklat-sedang'}`}>{item.dayName}</span>
-                  <span className="font-playfair text-2xl font-semibold leading-none tabular-nums sm:text-2xl">{item.dayNum}</span>
+                  <span className={`text-xs font-semibold sm:text-[13px] ${isSelected ? 'text-[#E1E9DC]' : 'text-coklat-sedang'}`}>{item.dayName}</span>
+                  <span className="font-playfair text-[22px] font-semibold leading-none tabular-nums sm:text-2xl">{item.dayNum}</span>
                   {item.hasThread && !item.isToday && (
                     <span className={`absolute bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full ${isSelected ? 'bg-[#E1E9DC]' : 'bg-lumut'}`} aria-hidden="true" />
                   )}
@@ -140,7 +140,6 @@ export const DateBar: React.FC<DateBarProps> = ({
           );
         })}
       </div>
-      <p className="mt-3 text-center text-[13px] leading-relaxed text-coklat-sedang">Geser tanggal untuk melihat hari lain, atau pilih untuk menyaring catatan.</p>
     </section>
   );
 };

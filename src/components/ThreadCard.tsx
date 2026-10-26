@@ -58,10 +58,10 @@ export const ThreadCard: React.FC<ThreadCardProps> = ({
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
               <div className="flex min-w-0 flex-wrap items-baseline gap-x-2">
-                <span className="font-playfair text-base font-semibold text-coklat-tua sm:text-lg">{authorHandle}</span>
+                <span className="font-playfair text-sm font-semibold text-coklat-tua sm:text-lg">{authorHandle}</span>
               </div>
               <div className="ml-auto flex shrink-0 items-center gap-1.5">
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] leading-snug text-coklat-sedang">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-snug text-coklat-sedang sm:text-[13px]">
                 {showPinnedBadge && post.is_pinned && (
                   <span role="img" aria-label="Disematkan" title="Disematkan" className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lumut/10 text-lumut">
                     <Pin className="h-3.5 w-3.5 fill-current" aria-hidden="true" />
@@ -76,7 +76,7 @@ export const ThreadCard: React.FC<ThreadCardProps> = ({
               </div>
             </div>
 
-            <p className="mt-3 break-words whitespace-pre-wrap font-reading text-base leading-[1.65] text-coklat-tua sm:text-lg sm:leading-[1.7]">
+            <p className="mt-3 break-words whitespace-pre-wrap font-reading text-[15px] leading-[1.65] text-coklat-tua sm:text-lg sm:leading-[1.7]">
               {post.content}
             </p>
 
@@ -104,12 +104,12 @@ export const ThreadCard: React.FC<ThreadCardProps> = ({
               <div className="min-w-0 flex-1 rounded-xl border border-garis/80 bg-krem/65 p-3.5 sm:p-4">
                 <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
                   <div className="flex flex-wrap items-baseline gap-x-2">
-                    <span className="font-playfair text-sm font-semibold text-coklat-tua">{authorHandle}</span>
+                    <span className="font-playfair text-[13px] font-semibold text-coklat-tua sm:text-sm">{authorHandle}</span>
                   </div>
-                  <time dateTime={reply.created_at} className="text-[13px] leading-snug text-coklat-sedang">{formatTime(reply.created_at)}</time>
+                  <time dateTime={reply.created_at} className="text-xs leading-snug text-coklat-sedang sm:text-[13px]">{formatTime(reply.created_at)}</time>
                 </div>
 
-                <p className="mt-2 break-words whitespace-pre-wrap font-reading text-[15px] leading-[1.65] text-coklat-tua sm:text-base sm:leading-[1.7]">
+                <p className="mt-2 break-words whitespace-pre-wrap font-reading text-sm leading-[1.65] text-coklat-tua sm:text-base sm:leading-[1.7]">
                   {reply.content}
                 </p>
 
